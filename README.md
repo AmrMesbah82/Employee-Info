@@ -21,8 +21,6 @@ You are provided with:
 SCREEN LAYOUT
 ========================================================
 
-The screen is split into two panels (tablet/desktop layout):
-
 +------------------+-------------------------------------+
 |  Organization Chart  >  Employee Info                  |
 +------------------+-------------------------------------+
@@ -65,7 +63,6 @@ You must create reusable widgets -- do not duplicate code:
 -------------------
 - Support light and dark theme
 - Use flutter_screenutil for responsive sizing
-- Breadcrumb navigation at the top
 - Left panel: avatar, name, job title, bio (scrollable), chat button
 - Right panel: 3 scrollable sections
 - Handle loading, error, and empty states in the UI
