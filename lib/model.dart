@@ -7,7 +7,6 @@
 class EmployeeModel {
   final String id;
   final String firstName;
-
   final String phone;
   final String? photoUrl;
   final String jobTitle;
@@ -15,7 +14,6 @@ class EmployeeModel {
   final PositionDetails positionDetails;
   final WorkingHours workingHours;
   final AcademicInfo academicInfo;
-  final List<SkillModel> skills;
   final List<String> hobbies;
 
   const EmployeeModel({
@@ -28,19 +26,13 @@ class EmployeeModel {
     required this.positionDetails,
     required this.workingHours,
     required this.academicInfo,
-    required this.skills,
     required this.hobbies,
   });
 
   /// Full display name
   String get fullName => '$firstName $lastName';
 
-  /// Skills formatted as comma-separated string
-  /// e.g. "Flutter (Expert), Dart (Advanced)"
-  String get skillsFormatted {
-    if (skills.isEmpty) return '-';
-    return skills.map((s) => s.formatted).join(', ');
-  }
+
 
   /// Hobbies formatted as comma-separated string
   String get hobbiesFormatted {
@@ -65,10 +57,6 @@ class EmployeeModel {
       academicInfo: AcademicInfo.fromJson(
         json['academic_info'] as Map<String, dynamic>? ?? {},
       ),
-      skills: (json['skills'] as List<dynamic>?)
-          ?.map((e) => SkillModel.fromJson(e as Map<String, dynamic>))
-          .toList() ??
-          [],
       hobbies: (json['hobbies'] as List<dynamic>?)
           ?.map((e) => e.toString())
           .toList() ??
@@ -88,7 +76,6 @@ class EmployeeModel {
       'position_details': positionDetails.toJson(),
       'working_hours': workingHours.toJson(),
       'academic_info': academicInfo.toJson(),
-      'skills': skills.map((s) => s.toJson()).toList(),
       'hobbies': hobbies,
     };
   }
