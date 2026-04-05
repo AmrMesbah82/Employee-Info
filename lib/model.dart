@@ -7,7 +7,7 @@
 class EmployeeModel {
   final String id;
   final String firstName;
-  final String email;
+
   final String phone;
   final String? photoUrl;
   final String jobTitle;
@@ -21,7 +21,6 @@ class EmployeeModel {
   const EmployeeModel({
     required this.id,
     required this.firstName,
-    required this.email,
     required this.phone,
     this.photoUrl,
     required this.jobTitle,
@@ -53,7 +52,6 @@ class EmployeeModel {
     return EmployeeModel(
       id: docId ?? json['id'] ?? '',
       firstName: json['first_name'] ?? '',
-      email: json['email'] ?? '',
       phone: json['phone'] ?? '',
       photoUrl: json['photo_url'],
       jobTitle: json['job_title'] ?? '',
@@ -82,7 +80,7 @@ class EmployeeModel {
     return {
       'id': id,
       'first_name': firstName,
-      'email': email,
+
       'phone': phone,
       'photo_url': photoUrl,
       'job_title': jobTitle,
