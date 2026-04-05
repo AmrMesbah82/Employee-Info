@@ -100,7 +100,7 @@ class _EmployeeDetailedInfoStaticState
     final subtitleColor = isLight ? Colors.black54 : Colors.white70;
     final primaryColor = isLight ? const Color(0xFF1E88E5) : const Color(0xFF64B5F6);
 
-    return ClipRRect(
+    return clipRRect(
       borderRadius: BorderRadius.circular(8),
       child: Container(
         decoration: BoxDecoration(
@@ -148,7 +148,7 @@ class _EmployeeDetailedInfoStaticState
                     Text(
                       'Senior Flutter Developer',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: textStyle(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         color: subtitleColor,
@@ -196,7 +196,7 @@ class _EmployeeDetailedInfoStaticState
                 style: ElevatedButton.styleFrom(
                   backgroundColor: primaryColor,
                   foregroundColor: Colors.white,
-                  minimumSize: Size(150.w, 38.h),
+                  minimumSize: Size(150 w, 38.h),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4.r),
                   ),
@@ -231,11 +231,11 @@ class _EmployeeDetailedInfoStaticState
               title: 'Position Details',
               isLight: isLight,
               items: const [
-                _InfoItem(icon: Icons.business, label: 'Department:', value: 'Technology & Development'),
-                _InfoItem(icon: Icons.supervisor_account, label: 'Supervisor:', value: 'Mohamed Ali'),
-                _InfoItem(icon: Icons.email_outlined, label: 'Email:', value: 'ahmed.mohamed@company.com'),
-                _InfoItem(icon: Icons.phone_outlined, label: 'Phone:', value: '+20 1012345678'),
-                _InfoItem(icon: Icons.badge_outlined, label: 'Title:', value: 'Senior Developer'),
+                InfoItem(icon: Icons.business, label: 'Department:', value: 'Technology & Development'),
+                InfoItem(icon: Icons.supervisor_account, label: 'Supervisor:', value: 'Mohamed Ali'),
+                InfoItem(icon: Icons.email_outlined, label: 'Email:', value: 'ahmed.mohamed@company.com'),
+                InfoItem(icon: Icons.phone_outlined, label: 'Phone:', value: '+20 1012345678'),
+                InfoItem(icon: Icons.badge_outlined, label: 'Title:', value: 'Senior Developer'),
               ],
             ),
 
