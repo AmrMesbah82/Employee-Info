@@ -80,18 +80,16 @@ WHAT NOT TO DO
 
 
 ========================================================
-EVALUATION CRITERIA
+Important matters to consider in your submission
 ========================================================
-
-  Criteria                                      Weight
-  --------                                      ------
-  Clean Architecture (layers separated)         25%
-  Cubit + States implemented properly           20%
-  Repository + Data Source pattern               15%
-  Reusable components (no duplicate code)        15%
-  Model used correctly with fromJson/toJson      10%
-  UI matches the reference layout                10%
-  Error/Loading state handling                    5%
+                                    
+  1- Clean Architecture (layers separated)         
+  2- Cubit + States implemented properly           
+  3- Repository + Data Source pattern               
+  4- Reusable components (no duplicate code)        
+  5- Model used correctly with fromJson/toJson      
+  6- UI matches the reference layout                
+  7- Error/Loading state handling                    
 
 
 ========================================================
